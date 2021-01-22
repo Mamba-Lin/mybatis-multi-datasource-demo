@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    dynamic:
+      primary: multi-source-test1 #设置默认的数据源或数据源组，默认值为master
+      strict: false #设置严格模式，默认false不启动。启动后在未匹配到指定数据源的时候会抛出异常,不启动则使用默认数据源
+    multi-source-test1:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/multi-source-test1?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: root
+    multi-source-test2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/multi-source-test2?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+
